@@ -25,7 +25,8 @@ function App() {
           <main className="main_content">
             <Routes>
               {/* ✅ FIXED: Use proper wildcard for nested routes */}
-              <Route path="/scopes/*" element={<NewEmployeeOnboarding />} />
+             <Route path="/scopes/employee/*" element={<NewEmployeeOnboarding />} />
+
 
               {/* Redirect base path */}
               <Route path="/" element={<Navigate to="/scopes/employee" replace />} />

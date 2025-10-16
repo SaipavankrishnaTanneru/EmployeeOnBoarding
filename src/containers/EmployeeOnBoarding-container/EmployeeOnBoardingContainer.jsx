@@ -4,7 +4,7 @@ import EmployeeOnboardingHeader from "../../components/EmployeeComponents/Employ
 import EmployeeNavTabOnBoarding from "../../components/EmployeeComponents/EmployeeNavtab";
 import { onboardingSteps } from "../../config/onboardingTabs";
 
-import BasicInfo from "../../components/EmployeeComponents/BasicInfo/BasicInfo";
+import BasicInfo from "../../components/EmployeeComponents/BasicInfoForms/BasicInfo.forms";
 const AddressInfo = () => <div>Address Info</div>;
 const FamilyInfo = () => <div>Family Info</div>;
 
@@ -43,9 +43,9 @@ const NewEmployeeOnboarding = () => {
           position: "sticky",
           top: 0,
           zIndex: 10,
-          backgroundColor: "#fff",
+          // backgroundColor: "#fff",
           padding: "10px 32px",
-          borderBottom: "1px solid #eee",
+          // borderBottom: "1px solid #eee",
         }}
       >
         <EmployeeNavTabOnBoarding />
@@ -62,14 +62,11 @@ const NewEmployeeOnboarding = () => {
         }}
       >
         <Routes>
-          {/* ✅ FIXED: correct relative redirect path */}
-          <Route index element={<Navigate to="basic-info" replace />} />
-
-          <Route path="basic-info" element={<BasicInfo />} />
-          <Route path="address-info" element={<AddressInfo />} />
-          <Route path="family-info" element={<FamilyInfo />} />
-          {/* Add other routes here */}
-        </Routes>
+  <Route index element={<Navigate to="basic-info" replace />} />
+  <Route path="basic-info" element={<BasicInfo />} />
+  <Route path="address-info" element={<AddressInfo />} />
+  <Route path="family-info" element={<FamilyInfo />} />
+</Routes>
       </div>
     </div>
   );
