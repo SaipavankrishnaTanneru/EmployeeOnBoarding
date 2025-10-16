@@ -6,16 +6,16 @@ const ProgressHeader = ({ step, totalSteps }) => {
 
   return (
     <div className={styles.ProgressHeader}>
-      {/* Step text */}
+      {/* ✅ Corrected Step text */}
       <div className={styles.steptext}>
-        Step: <span className={styles.stepnumber}>{step + 1}</span>
+        Step: <span className={styles.stepnumber}>{step}</span>
       </div>
 
       {/* Step blocks */}
       <div className={styles.steps} style={{ width: barWidth }}>
         {Array.from({ length: totalSteps }, (_, index) => {
           const currentStep = index + 1;
-          const isActive = currentStep <= step + 1;
+          const isActive = currentStep <= step; // ✅ fixed
 
           let className = `${styles.stepblock}`;
           if (index === 0) className += ` ${styles.first}`;
