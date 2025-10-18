@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import styles from "./Dropdown.module.css";
-import downarrow from "../../assets/application-distribution/downarrow";
+import downarrow from "../../assets/Icons/downarrow";
 import SearchBox from "../Searchbox/Searchbox";
 
 const dropdownsearchicon = (
